@@ -1,6 +1,5 @@
 import React from "react"
 import ReactMde from "react-mde"
-// const ReactMde = R.default
 import Showdown from "showdown"
 
 export default function Editor({ currentNote, updateNote }) {
@@ -11,12 +10,12 @@ export default function Editor({ currentNote, updateNote }) {
         simplifiedAutoLink: true,
         strikethrough: true,
         tasklists: true,
-    })  
+    })
 
     return (
         <section className="pane editor">
             <ReactMde
-                value={currentNote.body}
+                value={currentNote?.body}
                 onChange={updateNote}
                 selectedTab={selectedTab}
                 onTabChange={setSelectedTab}
